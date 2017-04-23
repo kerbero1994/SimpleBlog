@@ -1,0 +1,6 @@
+<h3>Comments</h3>
+<% @post.comments.each do |commnet|%>
+<div class="well">
+  <p><strong><%=commnet.username%></strong>:<%=commnet.body%>:<%=link_to '[X]', [commnet.post, commnet],method: :delete,data:{confirm:'Are you sure?'}%></p>
+</div>
+<%end%>
